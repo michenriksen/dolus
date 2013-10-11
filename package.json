@@ -1,0 +1,30 @@
+{
+  "name": "dolus",
+  "fullName": "Dolus",
+  "id": "dolus",
+  "description": "Hide your real IP from websites by sending X-Forwarded-For headers with fake IP addresses.\n\nThe X-Forwarded-For request header is used by proxies to tell web servers what IP address they are forwarding for.\n\nBecause of this, some websites (like Ruby On Rails powered sites) will log the IP seen in the X-Forwarded-For header instead of the actual IP that made the request, even though the value in the header can be completely controlled by the client.\n\nThe extension can give you some potential extra anonymity by putting out a smoke screen of false information, but it IS NOT a replacement for a real proxy, VPN or anonymity software like Tor!",
+  "author": "Michael Henriksen",
+  "license": "MIT",
+  "version": "0.1.2",
+  "preferences": [
+    {
+      "name": "permanentForwardedForAddress",
+      "title": "Use a permanent IP address:",
+      "description": "Use a permanent X-Forwarded-For IP address instead of randomly generating one.",
+      "type": "string"
+    },
+    {
+      "name": "renewRandomIp",
+      "title": "Generate a new random IP for this session:",
+      "label": "Renew random IP",
+      "type": "control"
+    },
+    {
+      "name": "showStartupNotification",
+      "title": "Show startup notification",
+      "description": "Displays the IP address that is used.",
+      "type": "bool",
+      "value": true
+    }
+  ]
+}
